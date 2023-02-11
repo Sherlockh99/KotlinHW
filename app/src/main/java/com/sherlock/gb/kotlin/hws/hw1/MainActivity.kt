@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private val binding
         get() = _binding!!
 
-    private val dataClassTest = DataClassTest("dddd",5)
+    private val dataClassTest = DataClassTest("test",5)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.button2.setOnClickListener {
             for(i in 1..10) {
-                Log.d(TAG, "i:$i")
+                if(i==1){
+                    Log.d(TAG, "I want a lot of money")
+                }else if (i==2){
+                    Log.d(TAG, "I want a lot of money twice")
+                }else{
+                    Log.d(TAG, "I want a lot of money $i times")
+                }
             }
             repeat(10){
-                Log.d(TAG, "Хочу денег " + (it + 1)+ " раз!!!")
+                Log.d(TAG, "it:$it")
             }
         }
     }
