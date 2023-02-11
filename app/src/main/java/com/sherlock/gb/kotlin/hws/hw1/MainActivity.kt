@@ -31,12 +31,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.button2.setOnClickListener {
             for(i in 1..10) {
-                if(i==1){
-                    Log.d(TAG, "I want a lot of money")
-                }else if (i==2){
-                    Log.d(TAG, "I want a lot of money twice")
-                }else{
-                    Log.d(TAG, "I want a lot of money $i times")
+                when (i) {
+                    1 -> {
+                        Log.d(TAG, "I want a lot of money")
+                    }
+                    2 -> {
+                        Log.d(TAG, "I want a lot of money twice")
+                    }
+                    else -> {
+                        Log.d(TAG, "I want a lot of money $i times")
+                    }
                 }
             }
             repeat(10){
