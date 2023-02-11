@@ -2,6 +2,7 @@ package com.sherlock.gb.kotlin.hws.hw1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.sherlock.gb.kotlin.hws.hw1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.button1.setOnClickListener {
+            Toast.makeText(this, "COPY", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onDestroy() {
