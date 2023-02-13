@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/copy_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/copy"
@@ -16,48 +16,48 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/param1"
+        android:id="@+id/data_class_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Param1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/copy_button" />
 
     <TextView
-        android:id="@+id/param2"
+        android:id="@+id/data_class_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Param2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/param1" />
+        app:layout_constraintTop_toBottomOf="@+id/data_class_name" />
 
     <TextView
-        android:id="@+id/param1_copy"
+        android:id="@+id/data_class_name_copy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Param1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/param2" />
+        app:layout_constraintTop_toBottomOf="@+id/data_class_age" />
 
     <TextView
-        android:id="@+id/param2_copy"
+        android:id="@+id/data_class_age_copy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Param2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/param1_copy" />
+        app:layout_constraintTop_toBottomOf="@+id/data_class_name_copy" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cycles_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cycles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/param2_copy" />
+        app:layout_constraintTop_toBottomOf="@+id/data_class_age_copy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
