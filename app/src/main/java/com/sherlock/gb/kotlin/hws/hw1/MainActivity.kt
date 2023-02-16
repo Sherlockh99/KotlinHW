@@ -9,27 +9,25 @@ private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
 
-    private var _binding: ActivityMainBinding? = null
-    private val binding
-        get() = _binding!!
+    private lateinit var ui: ActivityMainBinding
 
-    private val dataClassTest = DataClassTest("test",5)
+    private val dataClassTest = DataClassTest("Ivan",5)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        ui = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(ui.root)
 
-        binding.param1.text = dataClassTest.param1
-        binding.param2.text = dataClassTest.param2.toString()
+        ui.dataClassName.text = dataClassTest.name
+        ui.dataClassAge.text = dataClassTest.age.toString()
 
-        binding.button1.setOnClickListener {
-            val dataClassTestCopy = dataClassTest.copy(dataClassTest.param1,6)
-            binding.param1Copy.text = dataClassTestCopy.param1
-            binding.param2Copy.text = dataClassTestCopy.param2.toString()
+        ui.copyButton.setOnClickListener {
+            val dataClassTestCopy = dataClassTest.copy(dataClassTest.name,6)
+            ui.dataClassAgeCopy.text = dataClassTestCopy.name
+            ui.dataClassAge.text = dataClassTestCopy.age.toString()
         }
 
-        binding.button2.setOnClickListener {
+        ui.copyButton.setOnClickListener {
             for(i in 1..10) {
                 when (i) {
                     1 -> {
@@ -47,11 +45,6 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "it:$it")
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding=null
     }
 
 }
